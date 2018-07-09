@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //图片加载器Glide
+    implementation('com.github.bumptech.glide:glide:4.6.1') {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    api('jp.wasabeef:glide-transformations:3.1.1') {
+        exclude group: "com.android.support"
+    }
+    //黄油刀
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //Popwindow
+    api 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
+    //设置Shape样式
+    api 'cn.luliangdev:DevShapeUtils:1.0.3'
+    //沉浸式
+    api 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //BaseAdapter
+    api('com.zhy:base-rvadapter:3.0.3') {
+        exclude group: "com.android.support"
+    }
+    //列表下拉刷新
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-11'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-11'
+    //EventBus
+    api 'org.greenrobot:eventbus:3.1.1'
+    //方法数超出64
+    api 'com.android.support:multidex:1.0.3'
+    //多状态布局
+    api 'com.github.Bakumon:StatusLayoutManager:1.0.4'
+    //网络请求
+    api 'com.zhouyou:rxeasyhttp:2.1.0'
+    implementation files('libs/alipaySdk-20180601.jar')
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '27.1.1'
+            }
+        }
+    }
+}
