@@ -23,7 +23,7 @@ public class MApp extends BaseApplication {
     private void initEasyHttp() {
         EasyHttp.init(this);
         EasyHttp.getInstance()
-                .setBaseUrl("http://ceshi.caryu.com/Carwash/")
+                .setBaseUrl("")
                 .debug("Libs", true)
                 .setReadTimeOut(60 * 1000)
                 .setWriteTimeOut(60 * 100)

@@ -1,4 +1,4 @@
-package com.jiaop.jplibs;
+package com.jiaop.jplibs.mvp;
 
 import com.jiaop.libs.http.OnBaseHttpResultListener;
 import com.jiaop.libs.utils.ActivityUtil;

@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
  *     version: 1.0.0
  * </pre>
  */
-public class NotchUtil {
+public class  NotchUtil {
 
     public static final int NOTCH_IN_SCREEN_VOIO = 0x00000020;//是否有凹槽
     public static final int ROUNDED_IN_SCREEN_VOIO = 0x00000008;//是否有圆角

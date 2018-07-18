@@ -1,4 +1,4 @@
-package com.jiaop.jplibs;
+package com.jiaop.jplibs.mvp;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
