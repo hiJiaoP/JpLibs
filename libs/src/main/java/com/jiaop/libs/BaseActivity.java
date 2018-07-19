@@ -82,12 +82,16 @@ public abstract class BaseActivity extends AppCompatActivity implements NetWorkI
     /**
      * 加载网络数据
      */
-    protected abstract void initNetData();
+    protected void initNetData() {
+
+    }
 
     /**
      * 加载离线数据
      */
-    protected abstract void initOfflineData();
+    protected void initOfflineData() {
+
+    }
 
     /**
      * 获取状态栏

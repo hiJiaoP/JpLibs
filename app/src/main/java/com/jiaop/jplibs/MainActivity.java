@@ -33,16 +33,6 @@ public class MainActivity extends BaseActivity implements V {
     }
 
     @Override
-    protected void initNetData() {
-
-    }
-
-    @Override
-    protected void initOfflineData() {
-
-    }
-
-    @Override
     public String phone() {
         return "13520518525";
     }
