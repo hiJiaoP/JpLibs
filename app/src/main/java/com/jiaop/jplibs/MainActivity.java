@@ -46,4 +46,10 @@ public class MainActivity extends BaseActivity implements V {
     public void fail(String fail) {
         Toast.makeText(this, fail, Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    protected void onKeyBack() {
+        super.onKeyBack();
+
+    }
 }

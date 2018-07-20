@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.jiaop.libs.broadcast.NetWorkReceiver;
@@ -129,5 +130,29 @@ public abstract class BaseActivity extends AppCompatActivity implements NetWorkI
             unregisterReceiver(netWorkReceiver);
         if (mImmersionBar != null)
             mImmersionBar.destroy();
+    }
+
+    /**
+     * 物理返回
+     *
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+            onKeyBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    /**
+     * 物理返回键
+     */
+    protected void onKeyBack() {
+
     }
 }
