@@ -34,6 +34,7 @@ dependencies {
     implementation('com.github.bumptech.glide:glide:4.6.1') {
         exclude group: "com.android.support"
     }
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
     api('jp.wasabeef:glide-transformations:3.1.1') {
         exclude group: "com.android.support"
@@ -62,7 +63,10 @@ dependencies {
     api 'com.github.Bakumon:StatusLayoutManager:1.0.4'
     //网络请求
     api 'com.zhouyou:rxeasyhttp:2.1.0'
+    //支付宝
     implementation files('libs/alipaySdk-20180601.jar')
+    //二维码
+    api 'com.google.zxing:core:3.3.3'
 }
 
 configurations.all {
