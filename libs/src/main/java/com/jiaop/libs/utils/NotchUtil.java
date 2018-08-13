@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
  * <pre>
  *     author : jiaop
  *     time   : 2018/7/6
- *     desc   :
+ *     desc   : 异面屏刘海帮助类
  *     version: 1.0.0
  * </pre>
  */
