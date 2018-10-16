@@ -1,4 +1,4 @@
-package com.jiaop.libs.zxing;
+package com.jiaop.libs.zxing.reader;
 
 import android.graphics.Rect;
 import android.os.Bundle;

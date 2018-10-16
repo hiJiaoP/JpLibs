@@ -45,7 +45,7 @@ dependencies {
     //Popwindow
     api 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
     //设置Shape样式
-    api 'cn.luliangdev:DevShapeUtils:1.0.3'
+    api 'cn.luliangdev:DevShapeUtils:1.1.0'
     //沉浸式
     api 'com.gyf.barlibrary:barlibrary:2.3.0'
     //BaseAdapter
@@ -66,7 +66,7 @@ dependencies {
     //支付宝
     implementation files('libs/alipaySdk-20180601.jar')
     //二维码
-    api 'com.google.zxing:core:3.3.3'
+//    api 'com.google.zxing:core:3.3.3'
 }
 
 configurations.all {

@@ -17,12 +17,12 @@ import android.widget.RelativeLayout;
 import com.google.zxing.Result;
 import com.jiaop.jplibs.R;
 import com.jiaop.libs.utils.UIUtil;
-import com.jiaop.libs.zxing.BeepManager;
-import com.jiaop.libs.zxing.CameraManager;
-import com.jiaop.libs.zxing.CaptureAct;
-import com.jiaop.libs.zxing.CaptureActivityHandler;
-import com.jiaop.libs.zxing.DecodeThread;
-import com.jiaop.libs.zxing.InactivityTimer;
+import com.jiaop.libs.zxing.reader.BeepManager;
+import com.jiaop.libs.zxing.reader.CameraManager;
+import com.jiaop.libs.zxing.reader.CaptureAct;
+import com.jiaop.libs.zxing.reader.CaptureActivityHandler;
+import com.jiaop.libs.zxing.reader.DecodeThread;
+import com.jiaop.libs.zxing.reader.InactivityTimer;
 
 import java.io.IOException;
 import java.lang.reflect.Field;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jiaop.libs.zxing;
+package com.jiaop.libs.zxing.reader;
 
 import com.google.zxing.BarcodeFormat;
 import java.util.Collection;
