@@ -1,13 +1,5 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 final class FormatInformation {
 
     private static final int FORMAT_INFO_MASK_QR = 0x5412;

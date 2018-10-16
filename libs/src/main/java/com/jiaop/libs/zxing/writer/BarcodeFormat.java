@@ -1,13 +1,5 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public enum BarcodeFormat {
 
     /** Aztec 2D barcode format. */

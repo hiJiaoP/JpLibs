@@ -1,22 +1,22 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public enum ErrorCorrectionLevel {
 
-    /** L = ~7% correction */
+    /**
+     * L = ~7% correction
+     */
     L(0x01),
-    /** M = ~15% correction */
+    /**
+     * M = ~15% correction
+     */
     M(0x00),
-    /** Q = ~25% correction */
+    /**
+     * Q = ~25% correction
+     */
     Q(0x03),
-    /** H = ~30% correction */
+    /**
+     * H = ~30% correction
+     */
     H(0x02);
 
     private static final ErrorCorrectionLevel[] FOR_BITS = {M, L, H, Q};

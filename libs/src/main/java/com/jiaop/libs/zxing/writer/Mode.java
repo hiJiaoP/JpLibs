@@ -1,13 +1,5 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public enum Mode {
 
     TERMINATOR(new int[]{0, 0, 0}, 0x00), // Not really a mode...
@@ -19,7 +11,9 @@ public enum Mode {
     KANJI(new int[]{8, 10, 12}, 0x08),
     FNC1_FIRST_POSITION(new int[]{0, 0, 0}, 0x05),
     FNC1_SECOND_POSITION(new int[]{0, 0, 0}, 0x09),
-    /** See GBT 18284-2000; "Hanzi" is a transliteration of this mode name. */
+    /**
+     * See GBT 18284-2000; "Hanzi" is a transliteration of this mode name.
+     */
     HANZI(new int[]{8, 10, 12}, 0x0D);
 
     private final int[] characterCountBitsForVersions;
@@ -66,7 +60,7 @@ public enum Mode {
     /**
      * @param version version in question
      * @return number of bits used, in this QR Code symbol {@link Version}, to encode the
-     *         count of characters that will follow encoded in this Mode
+     * count of characters that will follow encoded in this Mode
      */
     public int getCharacterCountBits(Version version) {
         int number = version.getVersionNumber();

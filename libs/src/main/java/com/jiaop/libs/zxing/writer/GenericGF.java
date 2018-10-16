@@ -1,13 +1,5 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public final class GenericGF {
 
     public static final GenericGF AZTEC_DATA_12 = new GenericGF(0x1069, 4096, 1); // x^12 + x^6 + x^5 + x^3 + 1
@@ -31,12 +23,12 @@ public final class GenericGF {
      * Create a representation of GF(size) using the given primitive polynomial.
      *
      * @param primitive irreducible polynomial whose coefficients are represented by
-     *  the bits of an int, where the least-significant bit represents the constant
-     *  coefficient
-     * @param size the size of the field
-     * @param b the factor b in the generator polynomial can be 0- or 1-based
-     *  (g(x) = (x+a^b)(x+a^(b+1))...(x+a^(b+2t-1))).
-     *  In most cases it should be 1, but for QR code it is 0.
+     *                  the bits of an int, where the least-significant bit represents the constant
+     *                  coefficient
+     * @param size      the size of the field
+     * @param b         the factor b in the generator polynomial can be 0- or 1-based
+     *                  (g(x) = (x+a^b)(x+a^(b+1))...(x+a^(b+2t-1))).
+     *                  In most cases it should be 1, but for QR code it is 0.
      */
     public GenericGF(int primitive, int size, int b) {
         this.primitive = primitive;

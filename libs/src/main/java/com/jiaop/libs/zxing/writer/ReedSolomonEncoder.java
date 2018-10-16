@@ -3,14 +3,6 @@ package com.jiaop.libs.zxing.writer;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public final class ReedSolomonEncoder {
 
     private final GenericGF field;
@@ -27,7 +19,7 @@ public final class ReedSolomonEncoder {
             GenericGFPoly lastGenerator = cachedGenerators.get(cachedGenerators.size() - 1);
             for (int d = cachedGenerators.size(); d <= degree; d++) {
                 GenericGFPoly nextGenerator = lastGenerator.multiply(
-                        new GenericGFPoly(field, new int[] { 1, field.exp(d - 1 + field.getGeneratorBase()) }));
+                        new GenericGFPoly(field, new int[]{1, field.exp(d - 1 + field.getGeneratorBase())}));
                 cachedGenerators.add(nextGenerator);
                 lastGenerator = nextGenerator;
             }

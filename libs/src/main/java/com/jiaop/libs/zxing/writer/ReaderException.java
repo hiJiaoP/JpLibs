@@ -1,13 +1,5 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public abstract class ReaderException extends Exception {
 
     // disable stack traces when not running inside test units

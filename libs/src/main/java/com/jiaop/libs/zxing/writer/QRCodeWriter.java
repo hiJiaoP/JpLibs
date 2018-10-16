@@ -2,14 +2,6 @@ package com.jiaop.libs.zxing.writer;
 
 import java.util.Map;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public final class QRCodeWriter implements Writer {
 
     private static final int QUIET_ZONE_SIZE = 4;

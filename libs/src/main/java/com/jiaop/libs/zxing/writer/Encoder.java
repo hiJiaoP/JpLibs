@@ -5,14 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public final class Encoder {
 
     // The original table is defined in the table 5 of JISX0510:2004 (p.19).
@@ -20,7 +12,7 @@ public final class Encoder {
             -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  // 0x00-0x0f
             -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  // 0x10-0x1f
             36, -1, -1, -1, 37, 38, -1, -1, -1, -1, 39, 40, -1, 41, 42, 43,  // 0x20-0x2f
-            0,   1,  2,  3,  4,  5,  6,  7,  8,  9, 44, -1, -1, -1, -1, -1,  // 0x30-0x3f
+            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 44, -1, -1, -1, -1, -1,  // 0x30-0x3f
             -1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,  // 0x40-0x4f
             25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, -1, -1, -1, -1, -1,  // 0x50-0x5f
     };
@@ -44,7 +36,7 @@ public final class Encoder {
      * @param ecLevel error correction level to use
      * @return {@link QRCode} representing the encoded QR code
      * @throws WriterException if encoding can't succeed, because of for example invalid content
-     *   or configuration
+     *                         or configuration
      */
     public static QRCode encode(String content, ErrorCorrectionLevel ecLevel) throws WriterException {
         return encode(content, ecLevel, null);
@@ -52,7 +44,7 @@ public final class Encoder {
 
     public static QRCode encode(String content,
                                 ErrorCorrectionLevel ecLevel,
-                                Map<EncodeHintType,?> hints) throws WriterException {
+                                Map<EncodeHintType, ?> hints) throws WriterException {
 
         // Determine what character encoding has been specified by the caller, if any
         String encoding = DEFAULT_BYTE_MODE_ENCODING;
@@ -172,7 +164,7 @@ public final class Encoder {
 
     /**
      * @return the code point of the table used in alphanumeric mode or
-     *  -1 if there is no corresponding code in the table.
+     * -1 if there is no corresponding code in the table.
      */
     static int getAlphanumericCode(int code) {
         if (code < ALPHANUMERIC_TABLE.length) {

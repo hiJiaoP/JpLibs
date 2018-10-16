@@ -3,19 +3,11 @@ package com.jiaop.libs.zxing.writer;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
 public enum CharacterSetECI {
 
     // Enum name is a Java encoding valid for java.lang and java.io
-    Cp437(new int[]{0,2}),
-    ISO8859_1(new int[]{1,3}, "ISO-8859-1"),
+    Cp437(new int[]{0, 2}),
+    ISO8859_1(new int[]{1, 3}, "ISO-8859-1"),
     ISO8859_2(4, "ISO-8859-2"),
     ISO8859_3(5, "ISO-8859-3"),
     ISO8859_4(6, "ISO-8859-4"),
@@ -37,13 +29,14 @@ public enum CharacterSetECI {
     Cp1256(24, "windows-1256"),
     UnicodeBigUnmarked(25, "UTF-16BE", "UnicodeBig"),
     UTF8(26, "UTF-8"),
-    ASCII(new int[] {27, 170}, "US-ASCII"),
+    ASCII(new int[]{27, 170}, "US-ASCII"),
     Big5(28),
     GB18030(29, "GB2312", "EUC_CN", "GBK"),
     EUC_KR(30, "EUC-KR");
 
-    private static final Map<Integer,CharacterSetECI> VALUE_TO_ECI = new HashMap<>();
-    private static final Map<String,CharacterSetECI> NAME_TO_ECI = new HashMap<>();
+    private static final Map<Integer, CharacterSetECI> VALUE_TO_ECI = new HashMap<>();
+    private static final Map<String, CharacterSetECI> NAME_TO_ECI = new HashMap<>();
+
     static {
         for (CharacterSetECI eci : values()) {
             for (int value : eci.values) {
@@ -60,11 +53,11 @@ public enum CharacterSetECI {
     private final String[] otherEncodingNames;
 
     CharacterSetECI(int value) {
-        this(new int[] {value});
+        this(new int[]{value});
     }
 
     CharacterSetECI(int value, String... otherEncodingNames) {
-        this.values = new int[] {value};
+        this.values = new int[]{value};
         this.otherEncodingNames = otherEncodingNames;
     }
 
@@ -80,7 +73,7 @@ public enum CharacterSetECI {
     /**
      * @param value character set ECI value
      * @return {@code CharacterSetECI} representing ECI of given value, or null if it is legal but
-     *   unsupported
+     * unsupported
      * @throws FormatException if ECI value is invalid
      */
     public static CharacterSetECI getCharacterSetECIByValue(int value) throws FormatException {
@@ -93,7 +86,7 @@ public enum CharacterSetECI {
     /**
      * @param name character set ECI encoding name
      * @return CharacterSetECI representing ECI for character encoding, or null if it is legal
-     *   but unsupported
+     * but unsupported
      */
     public static CharacterSetECI getCharacterSetECIByName(String name) {
         return NAME_TO_ECI.get(name);

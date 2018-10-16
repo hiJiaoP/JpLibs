@@ -1,16 +1,9 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
-public final class FormatException extends ReaderException{
+public final class FormatException extends ReaderException {
 
     private static final FormatException INSTANCE = new FormatException();
+
     static {
         INSTANCE.setStackTrace(NO_TRACE); // since it's meaningless
     }

@@ -1,14 +1,6 @@
 package com.jiaop.libs.zxing.writer;
 
-/**
- * <pre>
- *     author : jiaop
- *     time   : 2018/10/16
- *     desc   :
- *     version: 1.0.0
- * </pre>
- */
-public enum  EncodeHintType {
+public enum EncodeHintType {
 
     /**
      * Specifies what degree of error correction to use, for example in QR Codes.
