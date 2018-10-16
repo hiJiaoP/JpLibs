@@ -66,7 +66,7 @@ dependencies {
     //支付宝
     implementation files('libs/alipaySdk-20180601.jar')
     //二维码
-//    api 'com.google.zxing:core:3.3.3'
+    api 'com.google.zxing:core:3.3.3'
 }
 
 configurations.all {
